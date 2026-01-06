@@ -11,7 +11,7 @@ class DataCollector:
     #collect read data from weather in Japan
     def collect_weather_data(self, city="Tokyo"):
         # Using OpenWeatherMap API (free version)
-        api_key = "codehere" #openweathermap.org
+        api_key = "4178c9bc3ff08f945a51cb45dbf59dcf" #openweathermap.org
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
         response = requests.get(url)
@@ -35,7 +35,12 @@ class DataCollector:
             return df
         return None
     
+# collect image data from given url to CV2
+
 if __name__ == "__main__":
     collector = DataCollector()
-    collector.collect_weather_data("Tokyo")
+    weather_data = collector.collect_weather_data("Tokyo")
+    print(weather_data)
 
+    if weather_data is not None:
+        print(f"Data collection successful: {weather_data} in {collector.raw_data}")
