@@ -11,7 +11,7 @@ class DataCollector:
     #collect read data from weather in Japan
     def collect_weather_data(self, city="Tokyo"):
         # Using OpenWeatherMap API (free version)
-        api_key = "4178c9bc3ff08f945a51cb45dbf59dcf" #openweathermap.org
+        api_key = "api_weather" #openweathermap.org
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
         response = requests.get(url)
