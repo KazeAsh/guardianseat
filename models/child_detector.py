@@ -21,8 +21,9 @@ class ChildDetector:
         self.child_class_id = 0  # 'person' class in COCO
         self.confidence_threshold = 0.5
         
+    # Detect children in a single image   
     def detect_in_image(self, image_path):
-        """Detect children in a single image"""
+
         results = self.model(image_path, conf=self.confidence_threshold)
         
         detections = []
@@ -52,7 +53,7 @@ class ChildDetector:
         return detections
     
     def _is_in_car_seat_region(self, x1, y1, x2, y2):
-        """Heuristic to check if detection is in car seat area"""
+
         # Car seats are typically in bottom half of image
         image_center_y = 480 / 2  # Assuming 640x480 image
         bbox_center_y = (y1 + y2) / 2
