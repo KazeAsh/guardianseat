@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-12T10:58:32.128852",
+    "num_scenarios": 20,
+    "sampling_rate": 100,
+    "duration": 60,
+    "description": "Simulated mmWave radar dataset for child detection"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "scenario_000",
+      "timestamp": "2026-01-12T10:58:31.994854",
+      "has_child": false,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 25.0,
+        "heart_rate_bpm": 125.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 1.2,
+        "temperature_c": 36.9,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 700.37595957139,
+        "humidity_percent": 58.818396094210975
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3216682473379349,
+        "iq_std": 0.15981232447124236
+      }
+    },
+    {
+      "scenario_id": "scenario_001",
+      "timestamp": "2026-01-12T10:58:32.014204",
+      "has_child": true,
+      "movement_level": "high",
+      "vital_signs": {
+        "breathing_rate_bpm": 25.0,
+        "heart_rate_bpm": 146.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 19.2,
+        "temperature_c": 34.5,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 743.4251022071744,
+        "humidity_percent": 62.04308826708199
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3714431060350897,
+        "iq_std": 0.23918207697571803
+      }
+    },
+    {
+      "scenario_id": "scenario_002",
+      "timestamp": "2026-01-12T10:58:32.035480",
+      "has_child": true,
+      "movement_level": "medium",
+      "vital_signs": {
+        "breathing_rate_bpm": 18.0,
+        "heart_rate_bpm": 113.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 24.8,
+        "temperature_c": 40.3,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 841.6981052055492,
+        "humidity_percent": 74.4158490288945
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36332699121735085,
+        "iq_std": 0.23145747365363667
+      }
+    },
+    {
+      "scenario_id": "scenario_003",
+      "timestamp": "2026-01-12T10:58:32.044177",
+      "has_child": false,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 20.0,
+        "heart_rate_bpm": 129.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 0.8,
+        "temperature_c": 38.6,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 687.3383714088172,
+        "humidity_percent": 63.88281586428417
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.32345795160193447,
+        "iq_std": 0.16012294079035022
+      }
+    },
+    {
+      "scenario_id": "scenario_004",
+      "timestamp": "2026-01-12T10:58:32.058274",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 16.0,
+        "heart_rate_bpm": 128.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 11.7,
+        "temperature_c": 24.6,
+        "door_state": "closed",
+        "engine_state": "on",
+        "co2_ppm": 1096.9020627801149,
+        "humidity_percent": 73.34618192492084
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36353077472247775,
+        "iq_std": 0.22939371244993076
+      }
+    },
+    {
+      "scenario_id": "scenario_005",
+      "timestamp": "2026-01-12T10:58:32.075041",
+      "has_child": false,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 21.0,
+        "heart_rate_bpm": 126.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 1.1,
+        "temperature_c": 23.7,
+        "door_state": "open",
+        "engine_state": "off",
+        "co2_ppm": 729.8771320275761,
+        "humidity_percent": 55.410405656396655
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.32322496962131164,
+        "iq_std": 0.1605931794786634
+      }
+    },
+    {
+      "scenario_id": "scenario_006",
+      "timestamp": "2026-01-12T10:58:32.075041",
+      "has_child": false,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 21.0,
+        "heart_rate_bpm": 125.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 0.4,
+        "temperature_c": 15.9,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 768.9291949680986,
+        "humidity_percent": 67.29648816889451
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.32258699799764423,
+        "iq_std": 0.1597857807779436
+      }
+    },
+    {
+      "scenario_id": "scenario_007",
+      "timestamp": "2026-01-12T10:58:32.075041",
+      "has_child": true,
+      "movement_level": "high",
+      "vital_signs": {
+        "breathing_rate_bpm": 26.0,
+        "heart_rate_bpm": 118.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 14.1,
+        "temperature_c": 27.9,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1303.1252492047945,
+        "humidity_percent": 70.38061889316062
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3698929767988972,
+        "iq_std": 0.23677845247123785
+      }
+    },
+    {
+      "scenario_id": "scenario_008",
+      "timestamp": "2026-01-12T10:58:32.075041",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 18.0,
+        "heart_rate_bpm": 116.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 23.0,
+        "temperature_c": 27.1,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 635.656449580358,
+        "humidity_percent": 62.16131608499446
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3628938516798556,
+        "iq_std": 0.22988606620335894
+      }
+    },
+    {
+      "scenario_id": "scenario_009",
+      "timestamp": "2026-01-12T10:58:32.093090",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 23.0,
+        "heart_rate_bpm": 157.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 24.7,
+        "temperature_c": 28.9,
+        "door_state": "open",
+        "engine_state": "on",
+        "co2_ppm": 615.6081100179864,
+        "humidity_percent": 74.25315365941634
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36355444228647676,
+        "iq_std": 0.23060471339834193
+      }
+    },
+    {
+      "scenario_id": "scenario_010",
+      "timestamp": "2026-01-12T10:58:32.093090",
+      "has_child": true,
+      "movement_level": "high",
+      "vital_signs": {
+        "breathing_rate_bpm": 28.0,
+        "heart_rate_bpm": 144.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 14.5,
+        "temperature_c": 23.2,
+        "door_state": "open",
+        "engine_state": "on",
+        "co2_ppm": 911.270565140959,
+        "humidity_percent": 54.09034937662984
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.37305720825828803,
+        "iq_std": 0.2396610469175513
+      }
+    },
+    {
+      "scenario_id": "scenario_011",
+      "timestamp": "2026-01-12T10:58:32.093090",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 17.0,
+        "heart_rate_bpm": 157.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 17.0,
+        "temperature_c": 19.6,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 490.1216888729378,
+        "humidity_percent": 54.5465838346837
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3621224649263372,
+        "iq_std": 0.2298825587491079
+      }
+    },
+    {
+      "scenario_id": "scenario_012",
+      "timestamp": "2026-01-12T10:58:32.093090",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 22.0,
+        "heart_rate_bpm": 132.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 24.0,
+        "temperature_c": 42.8,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1246.5945647458514,
+        "humidity_percent": 39.146606840974954
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36228880460138485,
+        "iq_std": 0.22933875456887978
+      }
+    },
+    {
+      "scenario_id": "scenario_013",
+      "timestamp": "2026-01-12T10:58:32.108801",
+      "has_child": true,
+      "movement_level": "medium",
+      "vital_signs": {
+        "breathing_rate_bpm": 28.0,
+        "heart_rate_bpm": 115.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 15.9,
+        "temperature_c": 37.0,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1230.1460039681979,
+        "humidity_percent": 64.37842278022748
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3633075790336197,
+        "iq_std": 0.23110107067129984
+      }
+    },
+    {
+      "scenario_id": "scenario_014",
+      "timestamp": "2026-01-12T10:58:32.108801",
+      "has_child": false,
+      "movement_level": "medium",
+      "vital_signs": {
+        "breathing_rate_bpm": 24.0,
+        "heart_rate_bpm": 128.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 0.6,
+        "temperature_c": 18.9,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1074.958855638739,
+        "humidity_percent": 79.01361536775386
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3231542933097275,
+        "iq_std": 0.15959221567043566
+      }
+    },
+    {
+      "scenario_id": "scenario_015",
+      "timestamp": "2026-01-12T10:58:32.108801",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 23.0,
+        "heart_rate_bpm": 153.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 11.5,
+        "temperature_c": 34.9,
+        "door_state": "open",
+        "engine_state": "off",
+        "co2_ppm": 662.7615897326316,
+        "humidity_percent": 46.98784284315892
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36295085829383417,
+        "iq_std": 0.22905311908695666
+      }
+    },
+    {
+      "scenario_id": "scenario_016",
+      "timestamp": "2026-01-12T10:58:32.108801",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 23.0,
+        "heart_rate_bpm": 119.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 20.6,
+        "temperature_c": 23.7,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 754.3415634430062,
+        "humidity_percent": 54.50161274150969
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36327685481182365,
+        "iq_std": 0.2305686625012264
+      }
+    },
+    {
+      "scenario_id": "scenario_017",
+      "timestamp": "2026-01-12T10:58:32.108801",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 31.0,
+        "heart_rate_bpm": 117.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 19.1,
+        "temperature_c": 38.7,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 522.3515626284756,
+        "humidity_percent": 77.05816415825083
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.36284833019495927,
+        "iq_std": 0.22935064311499329
+      }
+    },
+    {
+      "scenario_id": "scenario_018",
+      "timestamp": "2026-01-12T10:58:32.126606",
+      "has_child": true,
+      "movement_level": "high",
+      "vital_signs": {
+        "breathing_rate_bpm": 23.0,
+        "heart_rate_bpm": 117.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 11.3,
+        "temperature_c": 19.0,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1294.8244525038808,
+        "humidity_percent": 51.33247189304555
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.370225591137311,
+        "iq_std": 0.24052834188466232
+      }
+    },
+    {
+      "scenario_id": "scenario_019",
+      "timestamp": "2026-01-12T10:58:32.128852",
+      "has_child": true,
+      "movement_level": "low",
+      "vital_signs": {
+        "breathing_rate_bpm": 23.0,
+        "heart_rate_bpm": 114.0,
+        "breathing_confidence": 1.0,
+        "heartbeat_confidence": 1.0,
+        "vital_signs_detected": true
+      },
+      "car_sensors": {
+        "seat_pressure_kg": 17.4,
+        "temperature_c": 42.3,
+        "door_state": "closed",
+        "engine_state": "off",
+        "co2_ppm": 1475.7787636059088,
+        "humidity_percent": 32.311831857131324
+      },
+      "radar_metadata": {
+        "sampling_rate": 100,
+        "duration": 60,
+        "samples": 6000,
+        "iq_mean": 0.3622205744861372,
+        "iq_std": 0.22846367851457738
+      }
+    }
+  ]
+}
