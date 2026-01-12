@@ -1,0 +1,33 @@
+# Dockerfile.test to set up a testing environment
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+COPY requirements-test.txt .
+
+# Install dependencies including test tools
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir -r requirements-test.txt
+
+# Copy application
+COPY . .
+
+# Create test data directories
+RUN mkdir -p data/raw/mmwave data/processed outputs
+
+# Create non-root user
+RUN useradd -m -u 1000 testuser && chown -R testuser:testuser /app
+USER testuser
+
+# Default test command
+CMD ["pytest", "tests/", "-v", "--cov=./"]
