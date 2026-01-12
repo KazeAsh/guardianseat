@@ -77,53 +77,61 @@ def start_dashboard(port=8501):
     ])
 
 def run_signal_processing():
-    """Run signal processing pipeline"""
+    """Run signal processing pipeline - FIXED VERSION"""
     print("🔬 Running mmWave signal processing pipeline...")
     
     try:
-        # Check if processing module exists
+        # Try compatible processor first
         try:
-            from processing.mmwave_processor import MMWaveProcessor
+            from processing.compatible_processor import CompatibleMMWaveProcessor
             from utils.mmwave_simulator import MMWaveSimulator
-        except ImportError:
-            print("   ⚠️  Processing module not found, using built-in simulator...")
-            from utils.mmwave_simulator import MMWaveSimulator
-            # Create a simple processor class if not available
-            class SimpleProcessor:
-                def process_iq_data(self, iq_data):
-                    return {"status": "simulated", "message": "Processing simulated"}
             
-            processor = SimpleProcessor()
-        
-        # Generate test data
-        print("   Generating test data...")
-        simulator = MMWaveSimulator(sampling_rate=100, duration=30)
-        iq_data = simulator.generate_mmwave_iq_data(has_child=True, movement_level='low')
-        
-        # Process data
-        print("   Processing mmWave data...")
-        if 'processor' not in locals():
-            processor = MMWaveProcessor(sampling_rate=100)
-        
-        result = processor.process_iq_data(iq_data) if hasattr(processor, 'process_iq_data') else {"vital_signs": {"status": "simulated"}}
+            print("   Using compatible processor...")
+            
+            # Generate test data
+            simulator = MMWaveSimulator(sampling_rate=100, duration=30)
+            iq_data = simulator.generate_mmwave_iq_data(has_child=True, movement_level='low')
+            
+            # Process data
+            processor = CompatibleMMWaveProcessor(sampling_rate=100)
+            result = processor.process_iq_data(iq_data)
+            
+        except ImportError:
+            # Fallback to basic simulator
+            from utils.mmwave_simulator import MMWaveSimulator
+            import numpy as np
+            
+            print("   Using basic simulator...")
+            simulator = MMWaveSimulator(sampling_rate=100, duration=30)
+            iq_data = simulator.generate_mmwave_iq_data(has_child=True)
+            vital_signs = simulator.extract_vital_signs(iq_data)
+            result = {'vital_signs': vital_signs, 'status': 'simulated'}
         
         # Show results
         print(f"   ✅ Processing complete!")
-        if 'vital_signs' in result:
-            vital_signs = result['vital_signs']
-            if isinstance(vital_signs, dict):
-                print(f"   Results: {vital_signs}")
-            else:
-                print(f"   Results available")
+        vital = result.get('vital_signs', {})
+        if isinstance(vital, dict):
+            print(f"   Results: {vital}")
+        else:
+            print(f"   Results available")
         
-        # Try to save visualization if method exists
-        if hasattr(processor, 'visualize_processing'):
+        # Simple visualization
+        try:
+            import matplotlib.pyplot as plt
+            import os
+            
             os.makedirs("outputs/visualizations", exist_ok=True)
-            processor.visualize_processing(
-                iq_data, 
-                "outputs/visualizations/mmwave_processing.png"
-            )
-            print(f"   Visualization saved: outputs/visualizations/mmwave_processing.png")
+            
+            plt.figure(figsize=(10, 6))
+            plt.plot(np.abs(iq_data)[:500])
+            plt.title('mmWave Radar Signal (First 500 samples)')
+            plt.xlabel('Sample')
+            plt.ylabel('Amplitude')
+            plt.grid(True)
+            plt.savefig('outputs/visualizations/mmwave_simple.png', dpi=150)
+            print(f"   Visualization saved: outputs/visualizations/mmwave_simple.png")
+        except:
+            print("   ⚠️  Could not create visualization")
         
     except Exception as e:
         print(f"   ❌ Error: {e}")

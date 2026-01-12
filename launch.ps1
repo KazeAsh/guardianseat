@@ -25,6 +25,23 @@ switch ($Command.ToLower()) {
         & streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0
     }
     
+    "all" {
+        Write-Host "Starting API on port $Port and Dashboard on port 8501..." -ForegroundColor Cyan
+        if (Test-Path "venv\Scripts\activate.ps1") {
+            & .\venv\Scripts\activate.ps1
+        }
+        # Start API in background
+        Start-Job -ScriptBlock {
+            param($Port)
+            & uvicorn api.main:app --host 0.0.0.0 --port $Port --reload
+        } -ArgumentList $Port | Out-Null
+        # Start Dashboard in background
+        Start-Job -ScriptBlock {
+            & streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+        } | Out-Null
+        Write-Host "Both services started in background. Use 'Get-Job' to check status or 'Stop-Job' to stop." -ForegroundColor Green
+    }
+    
     "test" {
         Write-Host "Running tests..." -ForegroundColor Cyan
         if (Test-Path "venv\Scripts\activate.ps1") {
@@ -63,6 +80,7 @@ switch ($Command.ToLower()) {
         Write-Host "Available commands:" -ForegroundColor Green
         Write-Host "  .\launch.ps1 api [port]     - Start API (default: 8000)" -ForegroundColor White
         Write-Host "  .\launch.ps1 dashboard      - Start Dashboard" -ForegroundColor White
+        Write-Host "  .\launch.ps1 all [port]     - Start API and Dashboard together (default port: 8000)" -ForegroundColor White
         Write-Host "  .\launch.ps1 test           - Run tests" -ForegroundColor White
         Write-Host "  .\launch.ps1 process        - Run signal processing" -ForegroundColor White
         Write-Host "  .\launch.ps1 simulate       - Generate simulation data" -ForegroundColor White
