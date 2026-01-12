@@ -14,7 +14,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="GuardianSeat API", 
+app = FastAPI(title="GuardianSensor API", 
               description="Child-in-Vehicle Safety System API",
               version="1.0.0")
 
@@ -174,7 +174,7 @@ class AlertSystem:
 @app.get("/")
 async def root():
     return {
-        "service": "GuardianSeat API",
+        "service": "GuardianSensor API",
         "version": "1.0.0",
         "endpoints": [
             "/sensors - POST sensor data",

@@ -3,8 +3,8 @@ import requests
 import json
 from datetime import datetime
 
-class GuardianSeatClient:
-    """Client to interact with the GuardianSeat API"""
+class GuardianSensorClient:
+    """Client to interact with the GuardianSensor API"""
     
     def __init__(self, base_url="http://localhost:8000"):
         self.base_url = base_url
@@ -36,7 +36,7 @@ class GuardianSeatClient:
 
 # Test the API
 if __name__ == "__main__":
-    client = GuardianSeatClient()
+    client = GuardianSensorClient()
     
     # Test data
     test_data = {
